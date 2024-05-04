@@ -98,7 +98,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: arknights
+theme: hexo-theme-arknights
 ## theme: theme-3-hexo
 
 # Deployment
