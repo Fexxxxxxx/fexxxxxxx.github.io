@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>了解这个网站 | 李飞雪粉丝群整合包网</title>
+    <meta name="author" content="归叶无青" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="李飞雪粉丝群整合包网" type="application/atom+xml">
+</head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>李飞雪粉丝群整合包网</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;李飞雪粉丝群整合包网</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>了解这个网站</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/3/20
+        </span>
+        
+        <span class="category">
+            <a href="/categories/%E5%BE%85%E5%AE%9A/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                待定
+            </a>
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h2 id="一些琐事"><a href="#一些琐事" class="headerlink" title="一些琐事"></a>一些琐事</h2><p>分享一下这个网站的一些故事<br>小群群号377215515，欢迎唠嗑</p>
+<h3 id="这个网站是部署在哪里的"><a href="#这个网站是部署在哪里的" class="headerlink" title="这个网站是部署在哪里的"></a>这个网站是部署在哪里的</h3><p>如你所见，这个网站部署于Gitee之上<br>为什么不部署到Github呢？<br>1.Github有访问门槛，需要科学上网<br>鉴于群友的(俺)动(寻)手(思)能力，所以选择了Gitee<br>2.Gitee拥有更好的在线IDE功能，可以更好的临时维护网站<br>3.github.io的位置被我的个人博客占着</p>
+<h3 id="这个网站是免费的吗"><a href="#这个网站是免费的吗" class="headerlink" title="这个网站是免费的吗"></a>这个网站是免费的吗</h3><p>是的，这个网站遵循CC开源协议<br>一切内容都是开源且资源有际可查<br>所有资源的云盘分流资源均保存在个人云盘（群友提供的除外）<br>所有资源的直接下载资源均保存在Gitee仓库<br>感兴趣的可以前往<a target="_blank" rel="noopener" href="https://gitee.com/ManakaGekka">gitee.com&#x2F;ManakaGekka</a>查看<br>（可以打个星标支持一下）</p>
+<h3 id="整个网站有多少人在维护"><a href="#整个网站有多少人在维护" class="headerlink" title="整个网站有多少人在维护"></a>整个网站有多少人在维护</h3><p>有且只有我一位<br>整个网站的资源上传与网页排版&#x2F;维护都是我一个人在干<br>如果你有意向对咱们网站做出贡献<br>可以直接联系我（群里@归叶无青）<br>基本中午一点到次日七点都能看见我（我也是管理员）</p>
+<h3 id="归叶现实里是干什么的"><a href="#归叶现实里是干什么的" class="headerlink" title="归叶现实里是干什么的"></a>归叶现实里是干什么的</h3><p>鄙人不才，大学毕业于名古屋大学古建筑保护，选修日本历史<br>现任某同人社团副总兼网游策划<br>平常居家办公，育有一女<br>（不过女儿被老婆带去西欧玩了&#x2F;笑）<br>平常是个臭打游戏的</p>
+<h3 id="为什么会想到做这个网页"><a href="#为什么会想到做这个网页" class="headerlink" title="为什么会想到做这个网页"></a>为什么会想到做这个网页</h3><p>说实话，李雷每天根本不咋管QQ群<br>而且我也干过全职UP主，每天录素材+剪视频需要消耗很大精力<br>私底下也跟李大炮聊过，也能理解</p>
+<h3 id="做这个网站的契机"><a href="#做这个网站的契机" class="headerlink" title="做这个网站的契机"></a>做这个网站的契机</h3><p>大炮还在更新一个幸运方块空岛那会<br>大炮把整合包上传到群文件<br>不到半天就有小天才在线解压把整合包玩炸了<br>导致后面很多人都在问为什么整合包下载不了<br>我就想，不如写个网页给友友们下载整合包</p>
+<h3 id="最后感谢群友使用本网站"><a href="#最后感谢群友使用本网站" class="headerlink" title="最后感谢群友使用本网站"></a>最后感谢群友使用本网站</h3><p>如果友友们发现网站上有任何的bug<br>欢迎去群里@我反馈，感激不尽！</p>
+<h3 id="这里是赞助名单"><a href="#这里是赞助名单" class="headerlink" title="这里是赞助名单"></a>这里是赞助名单</h3><p>2024&#x2F;01&#x2F;20：某位不愿意透露姓名的李大吊（￥52.00）</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2024 李飞雪粉丝群整合包网
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;归叶无青
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

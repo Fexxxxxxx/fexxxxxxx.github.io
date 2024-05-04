@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>只有十天的惊变生存 | 李飞雪粉丝群整合包网</title>
+    <meta name="author" content="归叶无青" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="李飞雪粉丝群整合包网" type="application/atom+xml">
+</head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>李飞雪粉丝群整合包网</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;李飞雪粉丝群整合包网</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>只有十天的惊变生存</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/4/10
+        </span>
+        
+        <span class="category">
+            <a href="/categories/%E6%95%B4%E5%90%88%E5%8C%85/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                整合包
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/1-20-4/" style="color: #00bcd4">
+                    1.20.4
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h2 id="僵尸每天都会进化，尸潮席卷而来，血月随时都可能来临"><a href="#僵尸每天都会进化，尸潮席卷而来，血月随时都可能来临" class="headerlink" title="僵尸每天都会进化，尸潮席卷而来，血月随时都可能来临"></a>僵尸每天都会进化，尸潮席卷而来，血月随时都可能来临</h2><p>你是否能在这么困难的环境下活到最后，打败最终boss呢，赢得最终的胜利呢？<br>可以通过&#x2F;reload来呼出菜单<br>使用指令&#x2F;time set 0来重新开始<br>详细介绍请看下面</p>
+<h3 id="下载整合包"><a href="#下载整合包" class="headerlink" title="下载整合包"></a>下载整合包</h3><p><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1PE6OHnirkKb4TjZUSR_KRg?pwd=7g56">百度网盘</a>（提取码：7g56）<br><a target="_blank" rel="noopener" href="https://www.123pan.com/s/3SfXjv-MRzov.html">123云盘</a><br><a target="_blank" rel="noopener" href="https://share.weiyun.com/U5DVXGhv">腾讯微云</a><br><a target="_blank" rel="noopener" href="https://wwf.lanzn.com/b00l0rak2h">蓝奏云</a>（提取码：btro）<br><a target="_blank" rel="noopener" href="https://gitee.com/ManakaGekka/mcpacks/tree/master/Zombie_Survival_10%20Days_Challenge">Gitee</a></p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p><a target="_blank" rel="noopener" href="https://www.planetminecraft.com/data-pack/zombie-survival-10-days-challenge-10/">数据包页面</a></p>
+<h3 id="详细介绍"><a href="#详细介绍" class="headerlink" title="详细介绍"></a>详细介绍</h3><p>僵尸会分为4种职业：攻击者、破坏者、建造者、TNT手<br>攻击者是僵尸们主要攻击玩家的方式，通常会手持剑（第四天开始）并且保持着原版的（不聪明）AI和攻击</p>
+<h5 id="破坏者"><a href="#破坏者" class="headerlink" title="破坏者"></a>破坏者</h5><p>第五天开始生成，永久手持铁镐和铁斧头<br>从第五天开始会破坏普通方块（木质物品）<br>从第七天开始挖硬的方块（石头制品）<br>在周围有玩家比自身高度低时，会尝试向下挖掘来靠近玩家</p>
+<h5 id="建造者"><a href="#建造者" class="headerlink" title="建造者"></a>建造者</h5><p>第七天开始生成，手持64个泥土<br>当玩家高度比自身高时，会尝试搭高靠近玩家</p>
+<h5 id="TNT手"><a href="#TNT手" class="headerlink" title="TNT手"></a>TNT手</h5><p>第九天开始生成，穿着红色的皮革头盔，手持TNT<br>当附近有玩家时，会在脚下放置点燃的TNT<br>（极限模式10tick后爆炸，普通模式60tick后爆炸）并变为攻击者</p>
+<h5 id="其他修改"><a href="#其他修改" class="headerlink" title="其他修改"></a>其他修改</h5><p>数据包修改了动物，将部分动物、生物移除，将猪替换为野猪（犹猪兽）<br>每天晚上都有25%的概率是血月<br>血月时玩家的获得缓慢、挖掘疲劳、饥饿、虚弱的debuff<br>血月时，天气锁定为雷暴，闪电每隔15秒生成1次，并有10%的概率生成在玩家的位置<br>苦力怕变为闪电苦力怕，爆炸时间变短，威力变大。血月会在第二天时间0的时候停止<br>每天中午都会在周围生成空投，空投中有大量补给，第九第十天的空投质量会提升</p>
+<h5 id="BOSS"><a href="#BOSS" class="headerlink" title="BOSS"></a>BOSS</h5><p>在第十天晚上，会生成一个僵尸boss，boss身穿下界合金套，手持下界合金斧<br>boss有两个技能</p>
+<h6 id="一技能会造成爆炸，将玩家弹飞并造成摔落伤害"><a href="#一技能会造成爆炸，将玩家弹飞并造成摔落伤害" class="headerlink" title="一技能会造成爆炸，将玩家弹飞并造成摔落伤害"></a>一技能会造成爆炸，将玩家弹飞并造成摔落伤害</h6><h6 id="二技能会将玩家吸引，给予漂浮效果，并生成4道闪电（闪电有时会劈到玩家）"><a href="#二技能会将玩家吸引，给予漂浮效果，并生成4道闪电（闪电有时会劈到玩家）" class="headerlink" title="二技能会将玩家吸引，给予漂浮效果，并生成4道闪电（闪电有时会劈到玩家）"></a>二技能会将玩家吸引，给予漂浮效果，并生成4道闪电（闪电有时会劈到玩家）</h6><p>当我们击杀boss时，你就会赢得游戏，并将天数设为1day，从此形成循环<br>如果我们不击杀boss，时间会锁定为第十天的晚上，boss距离玩家过远会进行传送<br>开始游戏后可以选择游戏模式，游戏模式分为普通和困难<br>普通模式难度为普通，极限模式难度为困难<br>极限模式中，玩家死亡便会变为旁观者，只能通过切换游戏模式来重生<br>极限模式的苦力怕变为闪电苦力怕，游戏难度加大</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2024 李飞雪粉丝群整合包网
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;归叶无青
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>
