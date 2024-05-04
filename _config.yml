@@ -105,5 +105,5 @@ theme: hexo-theme-arknights
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@gitee.com:fexxxxxxx/fexxxxxxx.git
+  repo: git@gitee.com:fexxxxxxx/fexxxxxxx.io.git
   branch: main
