@@ -219,13 +219,6 @@
   </url>
   
   <url>
-    <loc>https://fexxxxxxx.gitee.io/tags/1-19-2/</loc>
-    <lastmod>2024-05-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://fexxxxxxx.gitee.io/tags/1-16-5/</loc>
     <lastmod>2024-05-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -234,6 +227,13 @@
   
   <url>
     <loc>https://fexxxxxxx.gitee.io/tags/1-12-2/</loc>
+    <lastmod>2024-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://fexxxxxxx.gitee.io/tags/1-19-2/</loc>
     <lastmod>2024-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

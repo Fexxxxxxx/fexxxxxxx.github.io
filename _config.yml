@@ -106,4 +106,4 @@ theme: hexo-theme-arknights
 deploy:
   type: git
   repo: git@gitee.com:fexxxxxxx/fexxxxxxx.git
-  branch: master
+  branch: main
