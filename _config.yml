@@ -99,7 +99,7 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: particlex
-## theme: hexo-theme-arknights
+## theme: arknights
 ## theme: theme-3-hexo
 
 # Deployment
